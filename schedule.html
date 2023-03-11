@@ -153,10 +153,37 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="day_2/jupyter.html">
-   Introduction to Jupyter
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="day_2/welcome.html">
+   Welcome to day 2!
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="day_2/01_getting_started_with_notebooks.html">
+     Getting started with the Jupyter Notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="day_2/02_oggm_workflow_intro.html">
+     A first projection in OGGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="day_2/02_solution_oggm_intro.html">
+     Solution to the coding activities: “A first projection in OGGM”
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="day_2/03_temperature_index_model.html">
+     Coding a simple temperature index model
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -512,7 +539,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true

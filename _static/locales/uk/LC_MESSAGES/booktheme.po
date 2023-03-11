@@ -8,74 +8,146 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "next page"
+msgstr "Наступна сторінка"
+
 msgid "repository"
 msgstr "сховище"
 
-msgid "open issue"
-msgstr "відкритий випуск"
-
-msgid "Contents"
-msgstr "Зміст"
-
-msgid "Fullscreen mode"
-msgstr "Повноекранний режим"
-
-msgid "Download this page"
-msgstr "Завантажте цю сторінку"
+msgid "suggest edit"
+msgstr "запропонувати редагувати"
 
 msgid "Download source file"
 msgstr "Завантажити вихідний файл"
 
-msgid "Launch"
-msgstr "Запуск"
+msgid "Open an issue"
+msgstr "Відкрийте випуск"
 
-msgid "Edit this page"
-msgstr "Редагувати цю сторінку"
-
-msgid "Toggle navigation"
-msgstr "Переключити навігацію"
-
-msgid "Theme by the"
-msgstr "Тема від"
-
-msgid "Source repository"
-msgstr "Джерело сховища"
-
-msgid "Last updated on"
-msgstr "Останнє оновлення:"
+msgid "Download this page"
+msgstr "Завантажте цю сторінку"
 
 msgid "By the"
 msgstr "По"
 
-msgid "Sphinx Book Theme"
-msgstr "Тема книги \"Сфінкс\""
-
-msgid "Open an issue"
-msgstr "Відкрийте випуск"
-
-msgid "next page"
-msgstr "Наступна сторінка"
-
-msgid "Copyright"
-msgstr "Авторське право"
-
-msgid "Search this book..."
-msgstr "Шукати в цій книзі ..."
-
-msgid "Print to PDF"
-msgstr "Друк у форматі PDF"
+msgid "Theme by the"
+msgstr "Тема від"
 
 msgid "By"
 msgstr "Автор"
 
-msgid "previous page"
-msgstr "Попередня сторінка"
+msgid "Copyright"
+msgstr "Авторське право"
 
-msgid "Search the docs ..."
-msgstr "Шукати в документах ..."
+msgid "Source repository"
+msgstr "Джерело сховища"
 
 msgid "Download notebook file"
 msgstr "Завантажте файл блокнота"
 
+msgid "Fullscreen mode"
+msgstr "Повноекранний режим"
+
+msgid "Search this book..."
+msgstr "Шукати в цій книзі ..."
+
+msgid "Contents"
+msgstr "Зміст"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема книги \"Сфінкс\""
+
+msgid "Edit this page"
+msgstr "Редагувати цю сторінку"
+
+msgid "previous page"
+msgstr "Попередня сторінка"
+
+msgid "Launch"
+msgstr "Запуск"
+
+msgid "Search the docs ..."
+msgstr "Шукати в документах ..."
+
+msgid "Print to PDF"
+msgstr "Друк у форматі PDF"
+
+msgid "open issue"
+msgstr "відкритий випуск"
+
+msgid "Last updated on"
+msgstr "Останнє оновлення:"
+
+msgid "Toggle navigation"
+msgstr "Переключити навігацію"
+
+msgid "next page"
+msgstr "Наступна сторінка"
+
+msgid "repository"
+msgstr "сховище"
+
 msgid "suggest edit"
 msgstr "запропонувати редагувати"
+
+msgid "Download source file"
+msgstr "Завантажити вихідний файл"
+
+msgid "Open an issue"
+msgstr "Відкрийте випуск"
+
+msgid "Download this page"
+msgstr "Завантажте цю сторінку"
+
+msgid "By the"
+msgstr "По"
+
+msgid "Theme by the"
+msgstr "Тема від"
+
+msgid "By"
+msgstr "Автор"
+
+msgid "Copyright"
+msgstr "Авторське право"
+
+msgid "Source repository"
+msgstr "Джерело сховища"
+
+msgid "Download notebook file"
+msgstr "Завантажте файл блокнота"
+
+msgid "Fullscreen mode"
+msgstr "Повноекранний режим"
+
+msgid "Search this book..."
+msgstr "Шукати в цій книзі ..."
+
+msgid "Contents"
+msgstr "Зміст"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема книги \"Сфінкс\""
+
+msgid "Edit this page"
+msgstr "Редагувати цю сторінку"
+
+msgid "previous page"
+msgstr "Попередня сторінка"
+
+msgid "Launch"
+msgstr "Запуск"
+
+msgid "Search the docs ..."
+msgstr "Шукати в документах ..."
+
+msgid "Print to PDF"
+msgstr "Друк у форматі PDF"
+
+msgid "open issue"
+msgstr "відкритий випуск"
+
+msgid "Last updated on"
+msgstr "Останнє оновлення:"
+
+msgid "Toggle navigation"
+msgstr "Переключити навігацію"

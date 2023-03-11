@@ -8,74 +8,146 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+msgid "next page"
+msgstr "volgende bladzijde"
+
 msgid "repository"
 msgstr "repository"
 
-msgid "open issue"
-msgstr "open probleem"
-
-msgid "Contents"
-msgstr "Inhoud"
-
-msgid "Fullscreen mode"
-msgstr "Volledig scherm"
-
-msgid "Download this page"
-msgstr "Download deze pagina"
+msgid "suggest edit"
+msgstr "suggereren bewerken"
 
 msgid "Download source file"
 msgstr "Download het bronbestand"
 
-msgid "Launch"
-msgstr "Lancering"
+msgid "Open an issue"
+msgstr "Open een probleem"
 
-msgid "Edit this page"
-msgstr "bewerk deze pagina"
-
-msgid "Toggle navigation"
-msgstr "Schakel navigatie"
-
-msgid "Theme by the"
-msgstr "Thema door de"
-
-msgid "Source repository"
-msgstr "Bronopslagplaats"
-
-msgid "Last updated on"
-msgstr "Laatst geupdate op"
+msgid "Download this page"
+msgstr "Download deze pagina"
 
 msgid "By the"
 msgstr "Door de"
 
-msgid "Sphinx Book Theme"
-msgstr "Sphinx-boekthema"
-
-msgid "Open an issue"
-msgstr "Open een probleem"
-
-msgid "next page"
-msgstr "volgende bladzijde"
-
-msgid "Copyright"
-msgstr "auteursrechten"
-
-msgid "Search this book..."
-msgstr "Zoek in dit boek ..."
-
-msgid "Print to PDF"
-msgstr "Afdrukken naar pdf"
+msgid "Theme by the"
+msgstr "Thema door de"
 
 msgid "By"
 msgstr "Door"
 
-msgid "previous page"
-msgstr "vorige pagina"
+msgid "Copyright"
+msgstr "auteursrechten"
 
-msgid "Search the docs ..."
-msgstr "Doorzoek de documenten ..."
+msgid "Source repository"
+msgstr "Bronopslagplaats"
 
 msgid "Download notebook file"
 msgstr "Download notebookbestand"
 
+msgid "Fullscreen mode"
+msgstr "Volledig scherm"
+
+msgid "Search this book..."
+msgstr "Zoek in dit boek ..."
+
+msgid "Contents"
+msgstr "Inhoud"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-boekthema"
+
+msgid "Edit this page"
+msgstr "bewerk deze pagina"
+
+msgid "previous page"
+msgstr "vorige pagina"
+
+msgid "Launch"
+msgstr "Lancering"
+
+msgid "Search the docs ..."
+msgstr "Doorzoek de documenten ..."
+
+msgid "Print to PDF"
+msgstr "Afdrukken naar pdf"
+
+msgid "open issue"
+msgstr "open probleem"
+
+msgid "Last updated on"
+msgstr "Laatst geupdate op"
+
+msgid "Toggle navigation"
+msgstr "Schakel navigatie"
+
+msgid "next page"
+msgstr "volgende bladzijde"
+
+msgid "repository"
+msgstr "repository"
+
 msgid "suggest edit"
 msgstr "suggereren bewerken"
+
+msgid "Download source file"
+msgstr "Download het bronbestand"
+
+msgid "Open an issue"
+msgstr "Open een probleem"
+
+msgid "Download this page"
+msgstr "Download deze pagina"
+
+msgid "By the"
+msgstr "Door de"
+
+msgid "Theme by the"
+msgstr "Thema door de"
+
+msgid "By"
+msgstr "Door"
+
+msgid "Copyright"
+msgstr "auteursrechten"
+
+msgid "Source repository"
+msgstr "Bronopslagplaats"
+
+msgid "Download notebook file"
+msgstr "Download notebookbestand"
+
+msgid "Fullscreen mode"
+msgstr "Volledig scherm"
+
+msgid "Search this book..."
+msgstr "Zoek in dit boek ..."
+
+msgid "Contents"
+msgstr "Inhoud"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx-boekthema"
+
+msgid "Edit this page"
+msgstr "bewerk deze pagina"
+
+msgid "previous page"
+msgstr "vorige pagina"
+
+msgid "Launch"
+msgstr "Lancering"
+
+msgid "Search the docs ..."
+msgstr "Doorzoek de documenten ..."
+
+msgid "Print to PDF"
+msgstr "Afdrukken naar pdf"
+
+msgid "open issue"
+msgstr "open probleem"
+
+msgid "Last updated on"
+msgstr "Laatst geupdate op"
+
+msgid "Toggle navigation"
+msgstr "Schakel navigatie"
