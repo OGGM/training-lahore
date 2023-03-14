@@ -1,0 +1,1058 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Calibrating the mass balance model &#8212; HUC-LUMS training Lahore 2023</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Ice thickness inversion" href="03_inversion.html" />
+    <link rel="prev" title="Data used by OGGM" href="01_data_prep.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-106829797-2', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">HUC-LUMS training Lahore 2023</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Organization
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../schedule.html">
+   Schedule
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 01 - General overview
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../day_1/intro.html">
+   General overview and scientific presentations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 02 - Glacier system modelling
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../day_2/welcome.html">
+   Welcome to day 2!
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_2/01_getting_started_with_notebooks.html">
+     Getting started with the Jupyter Notebook
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_2/02_oggm_workflow_intro.html">
+     A first projection in OGGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_2/02_solution_oggm_intro.html">
+     Solution to the coding activities: “A first projection in OGGM”
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_2/03_temperature_index_model.html">
+     Coding a simple temperature index model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 03 - Glacier dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../day_3/welcome.html">
+   Welcome to day 3!
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_3/01_ice_flow_parameters.html">
+     Influence of ice flow parameters on glacier size
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_3/02_surging_experiment.html">
+     Glacier surging experiments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 04 - Calibration, hydrology
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="welcome.html">
+   Welcome to day 4!
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="01_data_prep.html">
+     Data used by OGGM
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Calibrating the mass balance model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_inversion.html">
+     Ice thickness inversion
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/OGGM/binder/stable?urlpath=git-pull%3Frepo=https://github.com/OGGM/training-lahore%26urlpath%3Dlab%252Ftree%252Ftraining-lahore/docs/day_4/02_massbalance_calibration.ipynb%26branch%3Dmain"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://classroom.oggm.org/hub/user-redirect/git-pull?repo=https%3A//github.com/OGGM/training-lahore&urlpath=lab/tree/training-lahore/docs/day_4/02_massbalance_calibration.ipynb&branch=main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/OGGM/training-lahore"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/OGGM/training-lahore/issues/new?title=Issue%20on%20page%20%2Fday_4/02_massbalance_calibration.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/OGGM/training-lahore/edit/main/docs/day_4/02_massbalance_calibration.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/day_4/02_massbalance_calibration.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-up">
+   Set-up
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calibrated-mass-balance-parameters-in-the-oggm-pre-processed-directories">
+   Calibrated mass balance parameters in the OGGM pre-processed directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-modelled-mass-balance-time-series">
+   Plot the modelled mass balance time series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-mass-balance-profiles">
+   Plot the mass balance profiles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretation-of-the-chosen-parameters">
+   Interpretation of the chosen parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sensitivity-analysis-of-the-parameters">
+   Sensitivity analysis of the parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automated-calibration">
+   Automated calibration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#take-home-points">
+   Take home points
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Calibrating the mass balance model</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-up">
+   Set-up
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calibrated-mass-balance-parameters-in-the-oggm-pre-processed-directories">
+   Calibrated mass balance parameters in the OGGM pre-processed directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-modelled-mass-balance-time-series">
+   Plot the modelled mass balance time series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-the-mass-balance-profiles">
+   Plot the mass balance profiles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpretation-of-the-chosen-parameters">
+   Interpretation of the chosen parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sensitivity-analysis-of-the-parameters">
+   Sensitivity analysis of the parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automated-calibration">
+   Automated calibration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#take-home-points">
+   Take home points
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="calibrating-the-mass-balance-model">
+<h1>Calibrating the mass balance model<a class="headerlink" href="#calibrating-the-mass-balance-model" title="Permalink to this headline">#</a></h1>
+<p>The default mass-balance (MB) model of OGGM is a very standard <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0022169403002579">temperature index melt model</a>.</p>
+<p>In versions before 1.6, OGGM had a complex calibration procedure which originated from the times where we had only observations from a few hundred glaciers. We used them to calibrate the model and then a so-called <em>tstar</em> (famous in only very niche circles) which was interpolated to glaciers without observations (see the <a class="reference external" href="https://www.the-cryosphere.net/6/1295/2012/tc-6-1295-2012.html">original publication</a>). This method was very powerful but, as new observational datasets emerged, we can now calibrate on a glacier-per-glacier basis. With the new era of geodetic observations, OGGM uses per default the average geodetic observations from Jan 2000–Jan 2020 of <a class="reference external" href="https://www.nature.com/articles/s41586-021-03436-z">Hugonnet al. 2021</a>, that are now available for almost every glacier world-wide.</p>
+<p>Pre-processed directories from OGGM (from the Bremen server) have been calibrated for you, based on a specific climate dataset (W5E5) and our own dedicated calibration strategy. But, what if you want to use another climate dataset? Or another reference dataset?</p>
+<p>In this notebook, we will explain the basic influence of the mass balance parameters on the mass balance output.</p>
+<section id="set-up">
+<h2>Set-up<a class="headerlink" href="#set-up" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">oggm</span>
+<span class="kn">from</span> <span class="nn">oggm</span> <span class="kn">import</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">utils</span><span class="p">,</span> <span class="n">workflow</span><span class="p">,</span> <span class="n">tasks</span><span class="p">,</span> <span class="n">graphics</span>
+<span class="kn">from</span> <span class="nn">oggm.core</span> <span class="kn">import</span> <span class="n">massbalance</span>
+<span class="kn">from</span> <span class="nn">oggm.core.massbalance</span> <span class="kn">import</span> <span class="n">mb_calibration_from_scalar_mb</span><span class="p">,</span> <span class="n">mb_calibration_from_geodetic_mb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span class="n">cfg</span><span class="o">.</span><span class="n">PATHS</span><span class="p">[</span><span class="s1">&#39;working_dir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">(</span><span class="n">dirname</span><span class="o">=</span><span class="s1">&#39;OGGM-calib-mb&#39;</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:12:57: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:12:57: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:12:57: oggm.cfg: Multiprocessing: using all available processors (N=8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will focus on Hassanabad glacier (according to RGI):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we start from preprocessing level 3 again</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://cluster.klima.uni-bremen.de/~oggm/gdirs/oggm_v1.6/L3-L5_files/2023.1/elev_bands/W5E5&#39;</span>
+<span class="n">gdirs</span> <span class="o">=</span> <span class="n">workflow</span><span class="o">.</span><span class="n">init_glacier_directories</span><span class="p">([</span><span class="s1">&#39;RGI60-14.05446&#39;</span><span class="p">],</span> <span class="n">from_prepro_level</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">prepro_base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:12:57: oggm.workflow: init_glacier_directories from prepro level 3 on 1 glaciers.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:12:57: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 1 glaciers
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:12:57: oggm.utils: No known hash for cluster.klima.uni-bremen.de/~oggm/gdirs/oggm_v1.6/L3-L5_files/2023.1/elev_bands/W5E5/RGI62/b_080/L3/RGI60-14/RGI60-14.05.tar
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick the glacier and plot it</span>
+<span class="n">gdir</span> <span class="o">=</span> <span class="n">gdirs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">graphics</span><span class="o">.</span><span class="n">plot_googlemap</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">gdir</span><span class="o">.</span><span class="n">rgi_id</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/02_massbalance_calibration_7_0.png" src="../_images/02_massbalance_calibration_7_0.png" />
+</div>
+</div>
+</section>
+<section id="calibrated-mass-balance-parameters-in-the-oggm-pre-processed-directories">
+<h2>Calibrated mass balance parameters in the OGGM pre-processed directories<a class="headerlink" href="#calibrated-mass-balance-parameters-in-the-oggm-pre-processed-directories" title="Permalink to this headline">#</a></h2>
+<p>We just downloaded the data. Let’s have a look at the climate data we used and the calibrated parameters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdir</span><span class="o">.</span><span class="n">get_climate_info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;baseline_climate_source&#39;: &#39;GSWP3_W5E5&#39;,
+ &#39;baseline_yr_0&#39;: 1901,
+ &#39;baseline_yr_1&#39;: 2019,
+ &#39;baseline_climate_ref_hgt&#39;: 4217.0,
+ &#39;baseline_climate_ref_pix_lon&#39;: 74.75,
+ &#39;baseline_climate_ref_pix_lat&#39;: 36.25}
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is called the “baseline climate” in OGGM and is necessary to calibrate the model against observations. Ideally, the baseline climate should be real observations as perfect as possible, but in reality this is not the case. Often, gridded climate datasets have biases - we need to take this into accound during our calibration. Let’s have a look at the mass balance parameters for both glaciers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mb_calib</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;mb_calib&#39;</span><span class="p">)</span>  <span class="c1"># read the calibrated parameters</span>
+<span class="n">mb_calib</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;rgi_id&#39;: &#39;RGI60-14.05446&#39;,
+ &#39;bias&#39;: 0,
+ &#39;melt_f&#39;: 2.422776979436847,
+ &#39;prcp_fac&#39;: 5.685822941608611,
+ &#39;temp_bias&#39;: -6.591488988717475,
+ &#39;reference_mb&#39;: -10.3,
+ &#39;reference_mb_err&#39;: 115.0,
+ &#39;reference_period&#39;: &#39;2000-01-01_2020-01-01&#39;,
+ &#39;mb_global_params&#39;: {&#39;temp_default_gradient&#39;: -0.0065,
+  &#39;temp_all_solid&#39;: 0.0,
+  &#39;temp_all_liq&#39;: 2.0,
+  &#39;temp_melt&#39;: -1.0},
+ &#39;baseline_climate_source&#39;: &#39;GSWP3_W5E5&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will explain later what these parameters mean. Lets focus on these for now: <code class="docutils literal notranslate"><span class="pre">melt_f</span></code>, <code class="docutils literal notranslate"><span class="pre">prcp_fac</span></code>, and <code class="docutils literal notranslate"><span class="pre">temp_bias</span></code> which have been calibrated with <code class="docutils literal notranslate"><span class="pre">reference_mb</span></code> over the reference period <code class="docutils literal notranslate"><span class="pre">reference_period</span></code>.</p>
+<p>Per default the <a class="reference external" href="https://www.nature.com/articles/s41586-021-03436-z">Hugonnet et al. (2021)</a> average geodetic observation is used over the entire time period Jan 2000 to Jan 2020 to calibrate the MB model parameter(s) for every single glacier.</p>
+</section>
+<section id="plot-the-modelled-mass-balance-time-series">
+<h2>Plot the modelled mass balance time series<a class="headerlink" href="#plot-the-modelled-mass-balance-time-series" title="Permalink to this headline">#</a></h2>
+<p>OGGM provides a pre-calibrated mass-balance model. Let’s use it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mb_model</span> <span class="o">=</span> <span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">(</span><span class="n">gdir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To compute the mass balance, we need to know the elevation and width of our glacier. OGGM gets this information from the model flowlines:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the model flowlines for the plot</span>
+<span class="n">fls</span> <span class="o">=</span> <span class="n">gdir</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">&#39;model_flowlines&#39;</span><span class="p">)</span>
+<span class="n">heights</span> <span class="o">=</span> <span class="n">fls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">surface_h</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We want to compute the mass balance for the years 1980-2020</span>
+<span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span> <span class="mi">2020</span><span class="p">)</span>
+
+<span class="c1"># Let&#39;s compute it</span>
+<span class="n">mb_ts</span> <span class="o">=</span> <span class="n">mb_model</span><span class="o">.</span><span class="n">get_specific_mb</span><span class="p">(</span><span class="n">fls</span><span class="o">=</span><span class="n">fls</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">years</span><span class="p">)</span>
+
+<span class="c1"># And plot it</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Specific MB (mm w.e.)&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/02_massbalance_calibration_19_0.png" src="../_images/02_massbalance_calibration_19_0.png" />
+</div>
+</div>
+<p>How do we compare to the satellite “observations”? Let’s add them to the plot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ref_mb</span> <span class="o">=</span> <span class="n">mb_calib</span><span class="p">[</span><span class="s1">&#39;reference_mb&#39;</span><span class="p">]</span>
+<span class="n">ref_mb_err</span> <span class="o">=</span> <span class="n">mb_calib</span><span class="p">[</span><span class="s1">&#39;reference_mb_err&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">([</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">2020</span><span class="p">],</span> <span class="n">ref_mb</span><span class="o">+</span><span class="n">ref_mb_err</span><span class="p">,</span> <span class="n">ref_mb</span><span class="o">-</span><span class="n">ref_mb_err</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">([</span><span class="n">ref_mb</span><span class="p">],</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Specific MB (mm w.e.)&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/02_massbalance_calibration_22_0.png" src="../_images/02_massbalance_calibration_22_0.png" />
+</div>
+</div>
+<p>Note that the error bar here does not represent inter-annual variability, but the error of the estimated average over 2000-2020.</p>
+</section>
+<section id="plot-the-mass-balance-profiles">
+<h2>Plot the mass balance profiles<a class="headerlink" href="#plot-the-mass-balance-profiles" title="Permalink to this headline">#</a></h2>
+<p>For completeness, let’s also show two mass balance profiles as computed by the model:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First selected year</span>
+<span class="n">sel_year</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="n">mb_model</span><span class="o">.</span><span class="n">get_annual_mb</span><span class="p">(</span><span class="n">heights</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">sel_year</span><span class="p">)</span>
+<span class="c1"># convert units from kg ice per second to mm w.e. per year:</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="n">mb</span> <span class="o">*</span> <span class="n">cfg</span><span class="o">.</span><span class="n">SEC_IN_YEAR</span> <span class="o">*</span> <span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;ice_density&#39;</span><span class="p">]</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mb</span><span class="p">,</span> <span class="n">heights</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">sel_year</span><span class="p">);</span>
+
+<span class="c1"># Another year:</span>
+<span class="n">sel_year</span> <span class="o">=</span> <span class="mi">2003</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="n">mb_model</span><span class="o">.</span><span class="n">get_annual_mb</span><span class="p">(</span><span class="n">heights</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">sel_year</span><span class="p">)</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="n">mb</span> <span class="o">*</span> <span class="n">cfg</span><span class="o">.</span><span class="n">SEC_IN_YEAR</span> <span class="o">*</span> <span class="n">cfg</span><span class="o">.</span><span class="n">PARAMS</span><span class="p">[</span><span class="s1">&#39;ice_density&#39;</span><span class="p">]</span> 
+<span class="c1"># Plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">mb</span><span class="p">,</span> <span class="n">heights</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">sel_year</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Elevation (m a.s.l.)&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;MB (mm w.e. yr$^{-1}$)&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/02_massbalance_calibration_26_0.png" src="../_images/02_massbalance_calibration_26_0.png" />
+</div>
+</div>
+</section>
+<section id="interpretation-of-the-chosen-parameters">
+<h2>Interpretation of the chosen parameters<a class="headerlink" href="#interpretation-of-the-chosen-parameters" title="Permalink to this headline">#</a></h2>
+<div class="alert alert-info">
+    <b>
+        How are these parameters calibrated by OGGM? Do they make sense, and how were they chosen? Let's discuss in class.
+    </b>
+</div><p>Note also that there are some global MB parameters (<code class="docutils literal notranslate"><span class="pre">mb_global_params</span></code>), which we assume to be the same globally for every glacier:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdir</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;mb_calib&#39;</span><span class="p">)[</span><span class="s1">&#39;mb_global_params&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;temp_default_gradient&#39;: -0.0065,
+ &#39;temp_all_solid&#39;: 0.0,
+ &#39;temp_all_liq&#39;: 2.0,
+ &#39;temp_melt&#39;: -1.0}
+</pre></div>
+</div>
+</div>
+</div>
+<p>These global MB parameter values were found to represent best the in-situ observations during a cross-validation for glaciers with additional observations. Of course, they could also be changed for different glaciers, but this would need even more data to justify the differences! The influence of using a different temperature lapse rate gradient to the default -0.0065 K/km are analysed in <a class="reference external" href="https://doi.org/10.31223/X5C65S">Schuster et al. (2023, in review)</a>.</p>
+</section>
+<section id="sensitivity-analysis-of-the-parameters">
+<h2>Sensitivity analysis of the parameters<a class="headerlink" href="#sensitivity-analysis-of-the-parameters" title="Permalink to this headline">#</a></h2>
+<p>Let’s start by using the same mass balance model, but with the global default, non-calibrated OGGM parameters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The &quot;naive&quot; model uses simple first guesses for the model parameters: no climate correction, melt factor of 5</span>
+<span class="n">mbmod_naive</span> <span class="o">=</span> <span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">temp_bias</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">prcp_fac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">melt_f</span><span class="o">=</span><span class="mf">5.</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s compute it for the same years at the other model</span>
+<span class="n">mb_ts_naive</span> <span class="o">=</span> <span class="n">mbmod_naive</span><span class="o">.</span><span class="n">get_specific_mb</span><span class="p">(</span><span class="n">fls</span><span class="o">=</span><span class="n">fls</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">years</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;OGGM calibrated&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts_naive</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;OGGM global parameters&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Specific MB (mm w.e.)&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/02_massbalance_calibration_35_0.png" src="../_images/02_massbalance_calibration_35_0.png" />
+</div>
+</div>
+<p>Wow! This is really far from the observations! Simply assumming the mass balance parameter does not work in the majority of the cases.</p>
+<p><strong>The process of “calibration” refers to finding the optimal parameters so that the observations are matched. There are automated ways to do this, but first we will vary the parameters and see their influence.</strong></p>
+<p>Let vary the melt factor first:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vary between 1 (extremely low) and 15 (very high)</span>
+<span class="k">for</span> <span class="n">melt_factor</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]:</span>
+    <span class="n">mbmod_new</span> <span class="o">=</span> <span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">temp_bias</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">prcp_fac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">melt_f</span><span class="o">=</span><span class="n">melt_factor</span><span class="p">)</span>
+    <span class="n">mb_ts_new</span> <span class="o">=</span> <span class="n">mbmod_new</span><span class="o">.</span><span class="n">get_specific_mb</span><span class="p">(</span><span class="n">fls</span><span class="o">=</span><span class="n">fls</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">years</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts_new</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;melt_f:</span><span class="si">{</span><span class="n">melt_factor</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;OGGM calibrated&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Specific MB (mm w.e.)&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/02_massbalance_calibration_37_0.png" src="../_images/02_massbalance_calibration_37_0.png" />
+</div>
+</div>
+<p>It’s even worse! The high melt factors are very far from optimal.</p>
+<p><strong>Activity: copy the code above and, this time, change the temperature bias parameters to <code class="docutils literal notranslate"><span class="pre">[-2,</span> <span class="pre">-4,</span> <span class="pre">-6,</span> <span class="pre">-8]</span></code>, while keeping the melt factor constant at 5 and precipitation factor at 1. Plot the result.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+<details><summary><b>Can't go any further?</b> <i>Click for the answer</i></summary>
+<code>
+# Vary between 1 (extremely low) and 15 (very high)<br>
+for temp_bias in [-2, -4, -6, -8]:<br>
+    mbmod_new = massbalance.MonthlyTIModel(gdir, temp_bias=temp_bias, prcp_fac=1, melt_f=melt_factor)<br>
+    mb_ts_new = mbmod_new.get_specific_mb(fls=fls, year=years)<br>
+    plt.plot(years, mb_ts_new, label=f'temp_bias:{temp_bias}');<br>
+plt.plot(years, mb_ts, label='OGGM calibrated', color='k');<br>
+plt.ylabel('Specific MB (mm w.e.)'); plt.xlabel('Year'); plt.legend();
+</code>
+</div><p><strong>Activity: copy the code above and, this time, change the precipitation factor parameters to <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">6,</span> <span class="pre">9]</span></code>, while keeping the melt factor constant at 5 and temperature bias at 0. Plot the result.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your answer here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+<details><summary><b>Can't go any further?</b> <i>Click for the answer</i></summary>
+<code>
+# Vary between 1 (unchanged precip) and 9 (very high precip)<br>
+for prcp_fac in [1, 3, 6, 9]:<br>
+    mbmod_new = massbalance.MonthlyTIModel(gdir, temp_bias=0, prcp_fac=prcp_fac, melt_f=5)<br>
+    mb_ts_new = mbmod_new.get_specific_mb(fls=fls, year=years)<br>
+    plt.plot(years, mb_ts_new, label=f'prcp_fac:{prcp_fac}');<br>
+plt.plot(years, mb_ts, label='OGGM calibrated', color='k');<br>
+plt.ylabel('Specific MB (mm w.e.)'); plt.xlabel('Year'); plt.legend();<br>
+</code>
+</div></section>
+<section id="automated-calibration">
+<h2>Automated calibration<a class="headerlink" href="#automated-calibration" title="Permalink to this headline">#</a></h2>
+<p>Because it is very tedious to find the optimal parameters manually like we did above, OGGM offers ways to calibrate the parameters automatically. This is the purpose of the <code class="docutils literal notranslate"><span class="pre">mb_calibration_</span></code> tasks and will be discussed in the training:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">oggm.core.massbalance</span> <span class="kn">import</span> <span class="n">mb_calibration_from_scalar_mb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">optimal_params_2</span> <span class="o">=</span> <span class="n">mb_calibration_from_scalar_mb</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> <span class="n">ref_mb</span><span class="o">=</span><span class="n">mb_calib</span><span class="p">[</span><span class="s1">&#39;reference_mb&#39;</span><span class="p">],</span> <span class="n">write_to_gdir</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  
+                                                 <span class="n">ref_period</span><span class="o">=</span><span class="s1">&#39;2000-01-01_2019-31-12&#39;</span><span class="p">,</span>
+                                                 <span class="n">calibrate_param1</span><span class="o">=</span><span class="s1">&#39;melt_f&#39;</span><span class="p">,</span>
+                                                 <span class="n">calibrate_param2</span><span class="o">=</span><span class="s1">&#39;temp_bias&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:01: oggm.core.massbalance: (RGI60-14.05446) mb_calibration_from_scalar_mb
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">optim_model_2</span> <span class="o">=</span> <span class="n">massbalance</span><span class="o">.</span><span class="n">MonthlyTIModel</span><span class="p">(</span><span class="n">gdir</span><span class="p">,</span> 
+                                           <span class="n">temp_bias</span><span class="o">=</span><span class="n">optimal_params_2</span><span class="p">[</span><span class="s1">&#39;temp_bias&#39;</span><span class="p">],</span> 
+                                           <span class="n">prcp_fac</span><span class="o">=</span><span class="n">optimal_params_2</span><span class="p">[</span><span class="s1">&#39;prcp_fac&#39;</span><span class="p">],</span> 
+                                           <span class="n">melt_f</span><span class="o">=</span><span class="n">optimal_params_2</span><span class="p">[</span><span class="s1">&#39;melt_f&#39;</span><span class="p">])</span>
+
+<span class="n">mb_ts_2</span>  <span class="o">=</span> <span class="n">optim_model_2</span><span class="o">.</span><span class="n">get_specific_mb</span><span class="p">(</span><span class="n">fls</span><span class="o">=</span><span class="n">fls</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">years</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Another optimum&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">mb_ts</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;OGGM calibrated&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Specific MB (mm w.e.)&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/02_massbalance_calibration_49_0.png" src="../_images/02_massbalance_calibration_49_0.png" />
+</div>
+</div>
+</section>
+<section id="take-home-points">
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
+<p>The three mass balance parameters have a very difference influence on the simulated mass balance. We will discuss all of them during the training.</p>
+<p>If you want to go further, visit our <a class="reference external" href="https://oggm.org/tutorials/stable/notebooks/advanced/massbalance_calibration.html">full tutorial on mass balance calibration</a> on the OGGM website.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./day_4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="01_data_prep.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data used by OGGM</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="03_inversion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ice thickness inversion</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By OGGM Consortium<br/>
+  
+    <div class="extra_footer">
+      <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a> unless specified otherwise.
+<br>
+&copy; Copyright OGGM Consortium 2022-2023.
+</p>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
