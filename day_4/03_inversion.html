@@ -261,6 +261,35 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 05 - Open development, open questions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../day_5/welcome.html">
+   Welcome to day 5!
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_5/01_basin_scale_analysis.html">
+     Basin scale analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../day_5/02_user_defined_mb_model.html">
+     Define and use your own Mass-Balance Model
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
 
     </div>
 </nav></div>
@@ -654,16 +683,16 @@ the sensitivity of the model to this choice.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:04: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:30:43: oggm.cfg: Reading default parameters from the OGGM `params.cfg` configuration file.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:04: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:30:43: oggm.cfg: Multiprocessing switched OFF according to the parameter file.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:04: oggm.cfg: Multiprocessing: using all available processors (N=8)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:30:43: oggm.cfg: Multiprocessing: using all available processors (N=8)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:04: oggm.cfg: Multiprocessing switched ON after user settings.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:30:43: oggm.cfg: Multiprocessing switched ON after user settings.
 </pre></div>
 </div>
 </div>
@@ -1156,10 +1185,10 @@ the sensitivity of the model to this choice.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:06: oggm.workflow: init_glacier_directories from prepro level 3 on 17 glaciers.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:30:44: oggm.workflow: init_glacier_directories from prepro level 3 on 17 glaciers.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:06: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:30:44: oggm.workflow: Execute entity tasks [gdir_from_prepro] on 17 glaciers
 </pre></div>
 </div>
 </div>
@@ -1367,97 +1396,97 @@ slope: 0.032
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Applying global task calibrate_inversion_from_consensus on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Applying global task calibrate_inversion_from_consensus on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Consensus estimate optimisation with A factor: 0.1 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Consensus estimate optimisation with A factor: 0.1 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Consensus estimate optimisation with A factor: 10.0 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Consensus estimate optimisation with A factor: 10.0 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Consensus estimate optimisation with A factor: 9.949999999999 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Consensus estimate optimisation with A factor: 9.949999999999 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Consensus estimate optimisation with A factor: 9.802232116101495 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Consensus estimate optimisation with A factor: 9.802232116101495 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:49: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Consensus estimate optimisation with A factor: 9.851243276683002 and fs: 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Consensus estimate optimisation with A factor: 9.851243276683002 and fs: 0
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: calibrate_inversion_from_consensus converged after 4 iterations and fs=0. The resulting Glen A factor is 9.802232116101495.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: calibrate_inversion_from_consensus converged after 4 iterations and fs=0. The resulting Glen A factor is 9.802232116101495.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Applying global task inversion_tasks on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [prepare_for_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [mass_conservation_inversion] on 17 glaciers
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [get_inversion_volume] on 17 glaciers
 </pre></div>
 </div>
 </div>
@@ -1498,7 +1527,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-14 09:13:50: oggm.workflow: Execute entity tasks [distribute_thickness_per_altitude] on 1 glaciers
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-03-15 14:31:31: oggm.workflow: Execute entity tasks [distribute_thickness_per_altitude] on 1 glaciers
 </pre></div>
 </div>
 </div>
