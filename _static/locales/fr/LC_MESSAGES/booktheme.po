@@ -151,3 +151,69 @@ msgstr "Dernière mise à jour le"
 
 msgid "Toggle navigation"
 msgstr "Basculer la navigation"
+
+msgid "next page"
+msgstr "page suivante"
+
+msgid "repository"
+msgstr "dépôt"
+
+msgid "suggest edit"
+msgstr "suggestion de modification"
+
+msgid "Download source file"
+msgstr "Télécharger le fichier source"
+
+msgid "Open an issue"
+msgstr "Ouvrez un problème"
+
+msgid "Download this page"
+msgstr "Téléchargez cette page"
+
+msgid "By the"
+msgstr "Par le"
+
+msgid "Theme by the"
+msgstr "Thème par le"
+
+msgid "By"
+msgstr "Par"
+
+msgid "Copyright"
+msgstr "droits d'auteur"
+
+msgid "Source repository"
+msgstr "Dépôt source"
+
+msgid "Download notebook file"
+msgstr "Télécharger le fichier notebook"
+
+msgid "Fullscreen mode"
+msgstr "Mode plein écran"
+
+msgid "Contents"
+msgstr "Contenu"
+
+msgid "Sphinx Book Theme"
+msgstr "Thème du livre Sphinx"
+
+msgid "Edit this page"
+msgstr "Modifier cette page"
+
+msgid "previous page"
+msgstr "page précédente"
+
+msgid "Launch"
+msgstr "lancement"
+
+msgid "Print to PDF"
+msgstr "Imprimer au format PDF"
+
+msgid "open issue"
+msgstr "signaler un problème"
+
+msgid "Last updated on"
+msgstr "Dernière mise à jour le"
+
+msgid "Toggle navigation"
+msgstr "Basculer la navigation"

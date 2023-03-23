@@ -151,3 +151,69 @@ msgstr "Последнее обновление"
 
 msgid "Toggle navigation"
 msgstr "Переключить навигацию"
+
+msgid "next page"
+msgstr "Следующая страница"
+
+msgid "repository"
+msgstr "хранилище"
+
+msgid "suggest edit"
+msgstr "предложить редактировать"
+
+msgid "Download source file"
+msgstr "Скачать исходный файл"
+
+msgid "Open an issue"
+msgstr "Открыть вопрос"
+
+msgid "Download this page"
+msgstr "Загрузите эту страницу"
+
+msgid "By the"
+msgstr "Посредством"
+
+msgid "Theme by the"
+msgstr "Тема от"
+
+msgid "By"
+msgstr "По"
+
+msgid "Copyright"
+msgstr "авторское право"
+
+msgid "Source repository"
+msgstr "Исходный репозиторий"
+
+msgid "Download notebook file"
+msgstr "Скачать файл записной книжки"
+
+msgid "Fullscreen mode"
+msgstr "Полноэкранный режим"
+
+msgid "Contents"
+msgstr "Содержание"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема книги Сфинкс"
+
+msgid "Edit this page"
+msgstr "Редактировать эту страницу"
+
+msgid "previous page"
+msgstr "Предыдущая страница"
+
+msgid "Launch"
+msgstr "Запуск"
+
+msgid "Print to PDF"
+msgstr "Распечатать в PDF"
+
+msgid "open issue"
+msgstr "открытый вопрос"
+
+msgid "Last updated on"
+msgstr "Последнее обновление"
+
+msgid "Toggle navigation"
+msgstr "Переключить навигацию"

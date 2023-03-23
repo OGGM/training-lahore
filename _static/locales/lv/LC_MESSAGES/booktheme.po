@@ -151,3 +151,69 @@ msgstr "Pēdējoreiz atjaunināts"
 
 msgid "Toggle navigation"
 msgstr "Pārslēgt navigāciju"
+
+msgid "next page"
+msgstr "nākamā lapaspuse"
+
+msgid "repository"
+msgstr "krātuve"
+
+msgid "suggest edit"
+msgstr "ieteikt rediģēt"
+
+msgid "Download source file"
+msgstr "Lejupielādēt avota failu"
+
+msgid "Open an issue"
+msgstr "Atveriet problēmu"
+
+msgid "Download this page"
+msgstr "Lejupielādējiet šo lapu"
+
+msgid "By the"
+msgstr "Ar"
+
+msgid "Theme by the"
+msgstr "Autora tēma"
+
+msgid "By"
+msgstr "Autors"
+
+msgid "Copyright"
+msgstr "Autortiesības"
+
+msgid "Source repository"
+msgstr "Avota krātuve"
+
+msgid "Download notebook file"
+msgstr "Lejupielādēt piezīmju grāmatiņu"
+
+msgid "Fullscreen mode"
+msgstr "Pilnekrāna režīms"
+
+msgid "Contents"
+msgstr "Saturs"
+
+msgid "Sphinx Book Theme"
+msgstr "Sfinksa grāmatas tēma"
+
+msgid "Edit this page"
+msgstr "Rediģēt šo lapu"
+
+msgid "previous page"
+msgstr "iepriekšējā lapa"
+
+msgid "Launch"
+msgstr "Uzsākt"
+
+msgid "Print to PDF"
+msgstr "Drukāt PDF formātā"
+
+msgid "open issue"
+msgstr "atklāts jautājums"
+
+msgid "Last updated on"
+msgstr "Pēdējoreiz atjaunināts"
+
+msgid "Toggle navigation"
+msgstr "Pārslēgt navigāciju"

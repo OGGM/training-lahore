@@ -151,3 +151,69 @@ msgstr "Nazadnje posodobljeno dne"
 
 msgid "Toggle navigation"
 msgstr "Preklopi navigacijo"
+
+msgid "next page"
+msgstr "Naslednja stran"
+
+msgid "repository"
+msgstr "odlagališče"
+
+msgid "suggest edit"
+msgstr "predlagajte urejanje"
+
+msgid "Download source file"
+msgstr "Prenesite izvorno datoteko"
+
+msgid "Open an issue"
+msgstr "Odprite številko"
+
+msgid "Download this page"
+msgstr "Prenesite to stran"
+
+msgid "By the"
+msgstr "Avtor"
+
+msgid "Theme by the"
+msgstr "Tema avtorja"
+
+msgid "By"
+msgstr "Avtor"
+
+msgid "Copyright"
+msgstr "avtorske pravice"
+
+msgid "Source repository"
+msgstr "Izvorno skladišče"
+
+msgid "Download notebook file"
+msgstr "Prenesite datoteko zvezka"
+
+msgid "Fullscreen mode"
+msgstr "Celozaslonski način"
+
+msgid "Contents"
+msgstr "Vsebina"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema knjige Sphinx"
+
+msgid "Edit this page"
+msgstr "Uredite to stran"
+
+msgid "previous page"
+msgstr "Prejšnja stran"
+
+msgid "Launch"
+msgstr "Kosilo"
+
+msgid "Print to PDF"
+msgstr "Natisni v PDF"
+
+msgid "open issue"
+msgstr "odprto vprašanje"
+
+msgid "Last updated on"
+msgstr "Nazadnje posodobljeno dne"
+
+msgid "Toggle navigation"
+msgstr "Preklopi navigacijo"

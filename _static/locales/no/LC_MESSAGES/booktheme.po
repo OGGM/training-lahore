@@ -151,3 +151,69 @@ msgstr "Sist oppdatert den"
 
 msgid "Toggle navigation"
 msgstr "Bytt navigasjon"
+
+msgid "next page"
+msgstr "neste side"
+
+msgid "repository"
+msgstr "oppbevaringssted"
+
+msgid "suggest edit"
+msgstr "foreslå redigering"
+
+msgid "Download source file"
+msgstr "Last ned kildefilen"
+
+msgid "Open an issue"
+msgstr "Åpne et problem"
+
+msgid "Download this page"
+msgstr "Last ned denne siden"
+
+msgid "By the"
+msgstr "Ved"
+
+msgid "Theme by the"
+msgstr "Tema av"
+
+msgid "By"
+msgstr "Av"
+
+msgid "Copyright"
+msgstr "opphavsrett"
+
+msgid "Source repository"
+msgstr "Kildedepot"
+
+msgid "Download notebook file"
+msgstr "Last ned notatbokfilen"
+
+msgid "Fullscreen mode"
+msgstr "Fullskjerm-modus"
+
+msgid "Contents"
+msgstr "Innhold"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx boktema"
+
+msgid "Edit this page"
+msgstr "Rediger denne siden"
+
+msgid "previous page"
+msgstr "forrige side"
+
+msgid "Launch"
+msgstr "Start"
+
+msgid "Print to PDF"
+msgstr "Skriv ut til PDF"
+
+msgid "open issue"
+msgstr "åpent nummer"
+
+msgid "Last updated on"
+msgstr "Sist oppdatert den"
+
+msgid "Toggle navigation"
+msgstr "Bytt navigasjon"

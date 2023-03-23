@@ -151,3 +151,69 @@ msgstr "Senast uppdaterad den"
 
 msgid "Toggle navigation"
 msgstr "Växla navigering"
+
+msgid "next page"
+msgstr "nästa sida"
+
+msgid "repository"
+msgstr "förvar"
+
+msgid "suggest edit"
+msgstr "föreslå redigering"
+
+msgid "Download source file"
+msgstr "Ladda ner källfil"
+
+msgid "Open an issue"
+msgstr "Öppna ett problem"
+
+msgid "Download this page"
+msgstr "Ladda ner den här sidan"
+
+msgid "By the"
+msgstr "Vid"
+
+msgid "Theme by the"
+msgstr "Tema av"
+
+msgid "By"
+msgstr "Förbi"
+
+msgid "Copyright"
+msgstr "upphovsrätt"
+
+msgid "Source repository"
+msgstr "Källförvar"
+
+msgid "Download notebook file"
+msgstr "Ladda ner anteckningsbokfilen"
+
+msgid "Fullscreen mode"
+msgstr "Fullskärmsläge"
+
+msgid "Contents"
+msgstr "Innehåll"
+
+msgid "Sphinx Book Theme"
+msgstr "Sphinx boktema"
+
+msgid "Edit this page"
+msgstr "Redigera den här sidan"
+
+msgid "previous page"
+msgstr "föregående sida"
+
+msgid "Launch"
+msgstr "Lansera"
+
+msgid "Print to PDF"
+msgstr "Skriv ut till PDF"
+
+msgid "open issue"
+msgstr "öppet problem"
+
+msgid "Last updated on"
+msgstr "Senast uppdaterad den"
+
+msgid "Toggle navigation"
+msgstr "Växla navigering"

@@ -151,3 +151,69 @@ msgstr "Ultimo aggiornamento il"
 
 msgid "Toggle navigation"
 msgstr "Attiva / disattiva la navigazione"
+
+msgid "next page"
+msgstr "pagina successiva"
+
+msgid "repository"
+msgstr "repository"
+
+msgid "suggest edit"
+msgstr "suggerisci modifica"
+
+msgid "Download source file"
+msgstr "Scarica il file sorgente"
+
+msgid "Open an issue"
+msgstr "Apri un problema"
+
+msgid "Download this page"
+msgstr "Scarica questa pagina"
+
+msgid "By the"
+msgstr "Dal"
+
+msgid "Theme by the"
+msgstr "Tema di"
+
+msgid "By"
+msgstr "Di"
+
+msgid "Copyright"
+msgstr "Diritto d'autore"
+
+msgid "Source repository"
+msgstr "Repository di origine"
+
+msgid "Download notebook file"
+msgstr "Scarica il file del taccuino"
+
+msgid "Fullscreen mode"
+msgstr "Modalità schermo intero"
+
+msgid "Contents"
+msgstr "Contenuti"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema del libro della Sfinge"
+
+msgid "Edit this page"
+msgstr "Modifica questa pagina"
+
+msgid "previous page"
+msgstr "pagina precedente"
+
+msgid "Launch"
+msgstr "Lanciare"
+
+msgid "Print to PDF"
+msgstr "Stampa in PDF"
+
+msgid "open issue"
+msgstr "questione aperta"
+
+msgid "Last updated on"
+msgstr "Ultimo aggiornamento il"
+
+msgid "Toggle navigation"
+msgstr "Attiva / disattiva la navigazione"

@@ -151,3 +151,69 @@ msgstr "Terakhir diperbarui saat"
 
 msgid "Toggle navigation"
 msgstr "Alihkan navigasi"
+
+msgid "next page"
+msgstr "halaman selanjutnya"
+
+msgid "repository"
+msgstr "gudang"
+
+msgid "suggest edit"
+msgstr "menyarankan edit"
+
+msgid "Download source file"
+msgstr "Unduh file sumber"
+
+msgid "Open an issue"
+msgstr "Buka masalah"
+
+msgid "Download this page"
+msgstr "Unduh halaman ini"
+
+msgid "By the"
+msgstr "Oleh"
+
+msgid "Theme by the"
+msgstr "Tema oleh"
+
+msgid "By"
+msgstr "Oleh"
+
+msgid "Copyright"
+msgstr "hak cipta"
+
+msgid "Source repository"
+msgstr "Repositori sumber"
+
+msgid "Download notebook file"
+msgstr "Unduh file notebook"
+
+msgid "Fullscreen mode"
+msgstr "Mode layar penuh"
+
+msgid "Contents"
+msgstr "Isi"
+
+msgid "Sphinx Book Theme"
+msgstr "Tema Buku Sphinx"
+
+msgid "Edit this page"
+msgstr "Edit halaman ini"
+
+msgid "previous page"
+msgstr "halaman sebelumnya"
+
+msgid "Launch"
+msgstr "Meluncurkan"
+
+msgid "Print to PDF"
+msgstr "Cetak ke PDF"
+
+msgid "open issue"
+msgstr "masalah terbuka"
+
+msgid "Last updated on"
+msgstr "Terakhir diperbarui saat"
+
+msgid "Toggle navigation"
+msgstr "Alihkan navigasi"

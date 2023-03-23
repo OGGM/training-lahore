@@ -151,3 +151,69 @@ msgstr "Viimati uuendatud"
 
 msgid "Toggle navigation"
 msgstr "Lülita navigeerimine sisse"
+
+msgid "next page"
+msgstr "järgmine leht"
+
+msgid "repository"
+msgstr "hoidla"
+
+msgid "suggest edit"
+msgstr "soovita muuta"
+
+msgid "Download source file"
+msgstr "Laadige alla lähtefail"
+
+msgid "Open an issue"
+msgstr "Avage probleem"
+
+msgid "Download this page"
+msgstr "Laadige see leht alla"
+
+msgid "By the"
+msgstr "Autor"
+
+msgid "Theme by the"
+msgstr "Teema"
+
+msgid "By"
+msgstr "Kõrval"
+
+msgid "Copyright"
+msgstr "Autoriõigus"
+
+msgid "Source repository"
+msgstr "Allikahoidla"
+
+msgid "Download notebook file"
+msgstr "Laadige sülearvuti fail alla"
+
+msgid "Fullscreen mode"
+msgstr "Täisekraanirežiim"
+
+msgid "Contents"
+msgstr "Sisu"
+
+msgid "Sphinx Book Theme"
+msgstr "Sfinksiraamatu teema"
+
+msgid "Edit this page"
+msgstr "Muutke seda lehte"
+
+msgid "previous page"
+msgstr "eelmine leht"
+
+msgid "Launch"
+msgstr "Käivitage"
+
+msgid "Print to PDF"
+msgstr "Prindi PDF-i"
+
+msgid "open issue"
+msgstr "avatud küsimus"
+
+msgid "Last updated on"
+msgstr "Viimati uuendatud"
+
+msgid "Toggle navigation"
+msgstr "Lülita navigeerimine sisse"

@@ -151,3 +151,69 @@ msgstr "Naposledy aktualizováno"
 
 msgid "Toggle navigation"
 msgstr "Přepnout navigaci"
+
+msgid "next page"
+msgstr "další strana"
+
+msgid "repository"
+msgstr "úložiště"
+
+msgid "suggest edit"
+msgstr "navrhnout úpravy"
+
+msgid "Download source file"
+msgstr "Stáhněte si zdrojový soubor"
+
+msgid "Open an issue"
+msgstr "Otevřete problém"
+
+msgid "Download this page"
+msgstr "Stáhněte si tuto stránku"
+
+msgid "By the"
+msgstr "Podle"
+
+msgid "Theme by the"
+msgstr "Téma od"
+
+msgid "By"
+msgstr "Podle"
+
+msgid "Copyright"
+msgstr "autorská práva"
+
+msgid "Source repository"
+msgstr "Zdrojové úložiště"
+
+msgid "Download notebook file"
+msgstr "Stáhnout soubor poznámkového bloku"
+
+msgid "Fullscreen mode"
+msgstr "Režim celé obrazovky"
+
+msgid "Contents"
+msgstr "Obsah"
+
+msgid "Sphinx Book Theme"
+msgstr "Téma knihy Sfinga"
+
+msgid "Edit this page"
+msgstr "Upravit tuto stránku"
+
+msgid "previous page"
+msgstr "předchozí stránka"
+
+msgid "Launch"
+msgstr "Zahájení"
+
+msgid "Print to PDF"
+msgstr "Tisk do PDF"
+
+msgid "open issue"
+msgstr "otevřené číslo"
+
+msgid "Last updated on"
+msgstr "Naposledy aktualizováno"
+
+msgid "Toggle navigation"
+msgstr "Přepnout navigaci"

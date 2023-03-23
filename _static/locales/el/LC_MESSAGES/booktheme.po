@@ -151,3 +151,69 @@ msgstr "Τελευταία ενημέρωση στις"
 
 msgid "Toggle navigation"
 msgstr "Εναλλαγή πλοήγησης"
+
+msgid "next page"
+msgstr "επόμενη σελίδα"
+
+msgid "repository"
+msgstr "αποθήκη"
+
+msgid "suggest edit"
+msgstr "προτείνω επεξεργασία"
+
+msgid "Download source file"
+msgstr "Λήψη αρχείου προέλευσης"
+
+msgid "Open an issue"
+msgstr "Ανοίξτε ένα ζήτημα"
+
+msgid "Download this page"
+msgstr "Λήψη αυτής της σελίδας"
+
+msgid "By the"
+msgstr "Από το"
+
+msgid "Theme by the"
+msgstr "Θέμα από το"
+
+msgid "By"
+msgstr "Με"
+
+msgid "Copyright"
+msgstr "Πνευματική ιδιοκτησία"
+
+msgid "Source repository"
+msgstr "Αποθήκη πηγής"
+
+msgid "Download notebook file"
+msgstr "Λήψη αρχείου σημειωματάριου"
+
+msgid "Fullscreen mode"
+msgstr "ΛΕΙΤΟΥΡΓΙΑ ΠΛΗΡΟΥΣ ΟΘΟΝΗΣ"
+
+msgid "Contents"
+msgstr "Περιεχόμενα"
+
+msgid "Sphinx Book Theme"
+msgstr "Θέμα βιβλίου Sphinx"
+
+msgid "Edit this page"
+msgstr "Επεξεργαστείτε αυτήν τη σελίδα"
+
+msgid "previous page"
+msgstr "προηγούμενη σελίδα"
+
+msgid "Launch"
+msgstr "Εκτόξευση"
+
+msgid "Print to PDF"
+msgstr "Εκτύπωση σε PDF"
+
+msgid "open issue"
+msgstr "ανοιχτό ζήτημα"
+
+msgid "Last updated on"
+msgstr "Τελευταία ενημέρωση στις"
+
+msgid "Toggle navigation"
+msgstr "Εναλλαγή πλοήγησης"

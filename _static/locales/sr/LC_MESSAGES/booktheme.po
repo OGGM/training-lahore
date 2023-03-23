@@ -151,3 +151,69 @@ msgstr "Последње ажурирање"
 
 msgid "Toggle navigation"
 msgstr "Укључи / искључи навигацију"
+
+msgid "next page"
+msgstr "Следећа страна"
+
+msgid "repository"
+msgstr "спремиште"
+
+msgid "suggest edit"
+msgstr "предложи уређивање"
+
+msgid "Download source file"
+msgstr "Преузми изворну датотеку"
+
+msgid "Open an issue"
+msgstr "Отворите издање"
+
+msgid "Download this page"
+msgstr "Преузмите ову страницу"
+
+msgid "By the"
+msgstr "Од"
+
+msgid "Theme by the"
+msgstr "Тхеме би"
+
+msgid "By"
+msgstr "Од стране"
+
+msgid "Copyright"
+msgstr "Ауторско право"
+
+msgid "Source repository"
+msgstr "Изворно спремиште"
+
+msgid "Download notebook file"
+msgstr "Преузмите датотеку бележнице"
+
+msgid "Fullscreen mode"
+msgstr "Режим целог екрана"
+
+msgid "Contents"
+msgstr "Садржај"
+
+msgid "Sphinx Book Theme"
+msgstr "Тема књиге Спхинк"
+
+msgid "Edit this page"
+msgstr "Уредите ову страницу"
+
+msgid "previous page"
+msgstr "Претходна страница"
+
+msgid "Launch"
+msgstr "Лансирање"
+
+msgid "Print to PDF"
+msgstr "Испис у ПДФ"
+
+msgid "open issue"
+msgstr "отворено издање"
+
+msgid "Last updated on"
+msgstr "Последње ажурирање"
+
+msgid "Toggle navigation"
+msgstr "Укључи / искључи навигацију"
